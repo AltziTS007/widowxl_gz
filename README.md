@@ -4,7 +4,7 @@
 ## Installation and configuration
 
 * First clone the repo into your ws
-* Catkin_make
+* catkin_make
 * source ./devel/setup.bash
 * `roslaunch arm gazebo.launch`
 * Unpause the the world of gazebo
