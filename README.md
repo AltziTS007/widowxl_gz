@@ -1,5 +1,5 @@
 # Widowxl Gazebo
-<img src="images/widowxl_0.png" width="560"> <img src="images/widowxl_1.png" width="400">
+<img src="images/widowxl_0.png" width="400"> <img src="images/widowxl_1.png" width="400">
 
 ## Installation and configuration
 
