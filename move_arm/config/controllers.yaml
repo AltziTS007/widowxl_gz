@@ -1,0 +1,17 @@
+controller_list:
+  - name: /WIDOWXL/joint_trajectory_controller
+    action_ns: "follow_joint_trajectory"
+    type: FollowJointTrajectory
+    joints:
+        - joint_1
+        - joint_2
+        - joint_3
+        - joint_4
+        - joint_5
+  - name: /WIDOWXL/hand_controller
+    action_ns: "follow_joint_trajectory"
+    type: FollowJointTrajectory
+    joints:
+        - gripper_prismatic_joint_1
+        - gripper_prismatic_joint_2
+

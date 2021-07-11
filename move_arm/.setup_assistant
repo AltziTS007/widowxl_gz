@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: arm
+    relative_path: urdf/arm2urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/WIDOWXL.srdf
+  CONFIG:
+    author_name: Altzi
+    author_email: canko1908@gmail.com
+    generated_timestamp: 1626018108

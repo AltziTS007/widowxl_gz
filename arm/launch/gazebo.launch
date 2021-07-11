@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="true"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+<rosparam file="$(find arm)/launch/controller.yaml" command="load"/>
+
+<node
+	name="controller_spawner"
+	pkg="controller_manager"
+	type="spawner"
+	respawn="false"
+	output="screen"
+	args="joint_trajectory_controller hand_controller joint_state_controller"
+	ns="/WIDOWXL"
+/>
+
+
+  <param command="$(find xacro)/xacro $(find arm)/urdf/arm2urdf.xacro" name="robot_description"/>
+
+<node name="robot_state_publisher" output="screen" pkg="robot_state_publisher" respawn="false" type="robot_state_publisher">
+
+  <remap from="/joint_states" to="/WIDOWXL/joint_states"/>
+</node>
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+      <param name="use_gui" value="false"/>
+  </node>
+
+  <node args="-param robot_description -urdf -model WIDOWXL" name="spawn_urdf" 		pkg="gazebo_ros" type="spawn_model"/>
+
+</launch>
