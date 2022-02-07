@@ -22,7 +22,7 @@
   It also provides a GUI to move the simulated robot around "manually".
   This corresponds to moving around the real robot without the use of MoveIt.
   -->
-  <arg name="use_gui" default="false" />
+  <arg name="use_gui" default="true" />
   <arg name="use_rviz" default="true" />
 
   <!-- If needed, broadcast static tf for robot root -->

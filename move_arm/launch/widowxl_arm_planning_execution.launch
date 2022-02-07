@@ -17,7 +17,7 @@
   </include>
 
   <include file="$(find move_arm)/launch/moveit_rviz.launch">
-    <!--arg name="rviz_config" value="true"/-->
+    <arg name="rviz_config" value="true"/>
   </include>
 
 </launch>
